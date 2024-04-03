@@ -1,0 +1,67 @@
+{% extends 'base.html' %} 
+{% block body %}
+<link
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+  crossorigin="anonymous"
+/>
+<script
+  src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+  integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+  integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+  crossorigin="anonymous"
+></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+ integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+ crossorigin="anonymous">
+</script>
+<!-- <link rel="stylesheet" href="static/css/style.css"> -->
+<link rel="stylesheet" href="static/css/home.css">
+<link rel="stylesheet" href="static/css/cart.css">
+<!-- <script src="static/js/app.js"></script> -->
+
+
+
+<br><br><br>
+<h1 class="headname bg-body-secondary">Products in Cart</h1>
+
+<div id="cart_items">
+  <!-- items will be loaded here from the server using AJAX -->
+
+  </div>
+
+  
+
+
+ 
+  <!-- <button type="button" onclick="loadCartItems()" class="btn btn-primary mt-3">Load Items</button> -->
+  <!-- <hr>
+  <form onsubmit="return validateForm()">
+    <label for="productId">Product ID:{{ shopIT.id }}</label>
+    <input type="text" name="productId" id="productId" required />
+    <label for="quantity">Quantity:</label>
+    <input type="number" min="1" name="quantity" id="quantity" value="1" required />
+    <br>
+    <button type="submit" class="btn btn-success">Add to cart</button>
+  </form>
+  <hr> -->
+  Total Price : $<span id="totalPrice">{{ shopIT.price }}</span>
+  <br>
+  <button type="button" onclick="location.href = '/'" class="btn btn-primary m-4">Continue Shopping &raquo;</button>
+
+  <button type="button" onclick="removeAllFromCart()" class="btn btn-danger ">Remove All From Cart</button>
+
+ 
+  </form>
+</div>
+{% endblock %}
